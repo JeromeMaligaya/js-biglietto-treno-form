@@ -15,6 +15,9 @@ console.log('JS OK')
     const sendButton = document.getElementById('send-btn');
 
     const cancelButton = document.getElementById('cancel-btn');
+
+    const form = document.querySelector('form');
+    console.log('form', form)
    /* const resultPrice = document.getElementById('price');
     console.log('id', resultPrice);
     const resultDiscount = document.getElementById('discounted');
@@ -29,6 +32,7 @@ sendButton.addEventListener('click', function() {
         // 1.chiedo all'utente il nomee cognome
         const fullname = fullNameField.value.trim();
         console.log('Fullname', fullname)
+        
         // 2.chiedo all'utente quanti chilometri deve percorrere
         const userKm = parseInt(kmField.value.trim());
         console.log('Km', userKm)
@@ -72,6 +76,13 @@ sendButton.addEventListener('click', function() {
     ticketDiscounted = (ticketPrice - ((ticketPrice * discount) / 100)).toFixed(2);
     console.log('Ticket price with discount €', ticketDiscounted,);
     }
+
+    form.reset();
+})
+
+// button per il reset form
+cancelButton.addEventListener('click', function(){
+    form.reset();
 })
     
 // fine
