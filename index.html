@@ -15,15 +15,17 @@
     <body>
         <main>
             <form class="row justify-content-center g-3">
-               
+                <!-- user fullname -->
                 <div class="col-3">
                   <label for="fullname" class="form-label">Nome Cognome</label>
                   <input type="text" class="form-control" id="fullname" placeholder="Digita nome e cognome...">
                 </div>
+                <!-- km -->
                 <div class="col-3">
                   <label for="km" class="form-label">Km da percorrere</label>
-                  <input type="text" class="form-control" id="km" placeholder="Digita i chilometri che devi percorrere...">
+                  <input type="number" class="form-control" id="km" placeholder="Digita i chilometri che devi percorrere...">
                 </div>
+                <!-- age -->
                 <div class="col-3">
                   <label for="age" class="form-label">Fascia d'età</label>
                   <select id="age" class="form-select" required>
@@ -34,14 +36,29 @@
                   </select>
                 </div>
                 
-                
+                <!-- buttons -->
                 <div class="col-6 d-flex justify-content-end">
                   <button type="button" class="btn btn-primary" id="send-btn">Genera</button>
                 </div>
                 <div class="col-6">
                   <button type="button" class="btn btn-primary" id="cancel-btn">Annulla</button>
                 </div>
-              </form>
+            </form>
+
+            <div class="card mt-4 mx-auto" style="width: 18rem;">
+            
+                <div class="card-header fw-bolder">
+                    Il tuo biglietto
+                </div>
+           
+                <ul class="list-group list-group-flush">
+                    <li class="fullname list-group-item"><span>Nome passegero:</span></li>
+                    <li id="price" class="list-group-item"><span>Prezzo:</span></li>
+                    <li id="discounted" class="list-group-item"><span>Sconto:</span></li>
+                    <li id="price-discounted" class="list-group-item"><span>Prezzo finale:</span></li>
+                </ul>
+            </div>
+    
             
 
 
