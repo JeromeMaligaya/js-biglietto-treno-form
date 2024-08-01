@@ -13,24 +13,43 @@
     </head>
     
     <body>
-        <div class="card mt-4 ms-4" style="width: 18rem;">
-            <!-- title -->
-            <div class="card-header fw-bolder">
-                Preventivo Biglietto
-            </div>
-            <!-- values from script.js -->
-            <ul class="list-group list-group-flush">
-                <li id="km" class="list-group-item"><span>Km:</span></li>
-                <li id="age" class="list-group-item"><span>Età:</span></li>
-                <li id="price" class="list-group-item"><span>Prezzo:</span></li>
-                <li id="discounted" class="list-group-item"><span>Sconto:</span></li>
-                <li id="price-discounted" class="list-group-item"><span>Prezzo finale:</span></li>
-            </ul>
-        </div>
-        
+        <main>
+            <form class="row justify-content-center g-3">
+               
+                <div class="col-3">
+                  <label for="fullname" class="form-label">Nome Cognome</label>
+                  <input type="text" class="form-control" id="fullname" placeholder="Digita nome e cognome...">
+                </div>
+                <div class="col-3">
+                  <label for="km" class="form-label">Km da percorrere</label>
+                  <input type="text" class="form-control" id="km" placeholder="Digita i chilometri che devi percorrere...">
+                </div>
+                <div class="col-3">
+                  <label for="age" class="form-label">Fascia d'età</label>
+                  <select id="age" class="form-select" required>
+                    <option disabled selected>scegli un opzione</option>
+                    <option value="65"> &GreaterEqual; 65anni</option>
+                    <option value="18"> &#60; 18anni </option>
+                    <option value="senior"> adulto (maggiorenne)</option>
+                  </select>
+                </div>
+                
+                
+                <div class="col-6 d-flex justify-content-end">
+                  <button type="button" class="btn btn-primary" id="send-btn">Genera</button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-primary" id="cancel-btn">Annulla</button>
+                </div>
+              </form>
+            
+
+
+        </main>
         <!-- java -->
         <script src="script.js"></script>
     </body>
 </html>
 
 
+ 
